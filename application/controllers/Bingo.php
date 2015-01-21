@@ -8,7 +8,7 @@
  *
  * ------------------------------------------------------------------------
  */
-class Welcome extends Application {
+class Bingo extends Application {
 
     function __construct() {
         parent::__construct();
@@ -21,7 +21,19 @@ class Welcome extends Application {
     function index() {
         $this->data['pagebody'] = 'justone';    // this is the view we want shown
         // build the list of authors, to pass on to our view
-        $source = $this->quotes->last();
+        $source = $this->quotes->get(5);
+
+        $authors = array('who' => $source['who'], 'what' => $source['what'], 'mug' => $source['mug']);
+
+        $this->data = array_merge($this->data, $authors);
+
+        $this->render();
+    }
+
+    function wisdom(){
+        $this->data['pagebody'] = 'justone';    // this is the view we want shown
+        // build the list of authors, to pass on to our view
+        $source = $this->quotes->get(6);
 
         $authors = array('who' => $source['who'], 'what' => $source['what'], 'mug' => $source['mug']);
 
