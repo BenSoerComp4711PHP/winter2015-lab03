@@ -3,12 +3,12 @@
 /**
  * Our homepage. Show a table of all the author pictures. Clicking on one should show their quote.
  * Our quotes model has been autoloaded, because we use it everywhere.
- * 
+ *
  * controllers/Welcome.php
  *
  * ------------------------------------------------------------------------
  */
-class Welcome extends Application {
+class Guess extends Application {
 
     function __construct() {
         parent::__construct();
@@ -19,22 +19,9 @@ class Welcome extends Application {
     //-------------------------------------------------------------
 
     function index() {
-        $this->data['pagebody'] = 'homepage';    // this is the view we want shown
-        // build the list of authors, to pass on to our view
-        $source = $this->quotes->all();
-        $authors = array();
-        foreach ($source as $record) {
-            $authors[] = array('who' => $record['who'], 'mug' => $record['mug'], 'href' => $record['where']);
-        }
-        $this->data['authors'] = $authors;
-
-        $this->render();
-    }
-
-    function shucks(){
         $this->data['pagebody'] = 'justone';    // this is the view we want shown
         // build the list of authors, to pass on to our view
-        $source = $this->quotes->get(2);
+        $source = $this->quotes->get(4);
 
         $authors = array('who' => $source['who'], 'what' => $source['what'], 'mug' => $source['mug']);
 
