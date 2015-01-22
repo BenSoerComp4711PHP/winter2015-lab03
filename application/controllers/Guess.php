@@ -17,7 +17,9 @@ class Guess extends Application {
     //-------------------------------------------------------------
     //  The normal pages
     //-------------------------------------------------------------
-
+    /**
+     * Image 4 routes to this controller - see router
+     */
     function index() {
         $this->data['pagebody'] = 'justone';    // this is the view we want shown
         // build the list of authors, to pass on to our view

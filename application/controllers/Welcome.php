@@ -17,7 +17,9 @@ class Welcome extends Application {
     //-------------------------------------------------------------
     //  The normal pages
     //-------------------------------------------------------------
-
+    /**
+     * Main page. All images load here
+     */
     function index() {
         $this->data['pagebody'] = 'homepage';    // this is the view we want shown
         // build the list of authors, to pass on to our view
@@ -31,6 +33,9 @@ class Welcome extends Application {
         $this->render();
     }
 
+    /**
+     * Image 2 routes to this controller - see router
+     */
     function shucks(){
         $this->data['pagebody'] = 'justone';    // this is the view we want shown
         // build the list of authors, to pass on to our view

@@ -18,6 +18,9 @@ class Welcome extends Application {
     //  The normal pages
     //-------------------------------------------------------------
 
+    /**
+     * The "Last" label on the menu links to this controller - see router
+     */
     function index() {
         $this->data['pagebody'] = 'justone';    // this is the view we want shown
         // build the list of authors, to pass on to our view

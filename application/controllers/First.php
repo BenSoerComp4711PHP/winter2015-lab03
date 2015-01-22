@@ -18,6 +18,9 @@ class First extends Application {
     //  The normal pages
     //-------------------------------------------------------------
 
+    /**
+     * The "First" label routes to this controller - see router
+     */
     function index() {
         $this->data['pagebody'] = 'justone';    // this is the view we want shown
         // build the list of authors, to pass on to our view
@@ -30,6 +33,9 @@ class First extends Application {
         $this->render();
     }
 
+    /**
+     * Image 1 routes to this controller - see router
+     */
     function zzz(){
         $this->data['pagebody'] = 'justone';    // this is the view we want shown
         // build the list of authors, to pass on to our view
@@ -42,6 +48,11 @@ class First extends Application {
         $this->render();
     }
 
+    /**
+     * Image 3 routes to this controller. Though passing another images ID to this controller will also load that page
+     * . See router for URL needed to trigger this controller
+     * @param $id the id of the image belonging to the page to load
+     */
     function gimmie($id){
         $this->data['pagebody'] = 'justone';    // this is the view we want shown
         // build the list of authors, to pass on to our view
