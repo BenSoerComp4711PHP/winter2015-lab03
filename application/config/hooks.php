@@ -10,7 +10,13 @@
 |
 */
 
-
+$hook['display_override'] = array(
+    'class'    => 'FontFixer',
+    'function' => 'boldinator',
+    'filename' => 'FontFixer.php',
+    'filepath' => 'hooks',
+    //'params'   => array('beer', 'wine', 'snacks')
+);
 
 /* End of file hooks.php */
 /* Location: ./application/config/hooks.php */
